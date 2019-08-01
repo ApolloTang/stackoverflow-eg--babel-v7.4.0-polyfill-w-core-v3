@@ -1,0 +1,19 @@
+{
+  "name": "stackoverflow-eg--babel-v7.4.0-polyfill-w-core-v3",
+  "version": "1.0.0",
+  "main": "in.es",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "dependencies": {
+    "core-js": "^3.1.4",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "scripts": {
+    "build:polyfilled": "babel --no-babelrc --config-file './babel.config.polyfilled.js'  -o out.polyfilled.js in.es",
+    "build": "babel --no-babelrc --config-file './babel.config.no-polyfill.js' -o out.no-polyfill.js in.es"
+  }
+}
